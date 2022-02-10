@@ -106,8 +106,6 @@ public class TableTest extends Base {
 
 		// Table2 will sort as Last Name
 		tableData.getSortByLastNameTable2().click();
-		
-		Thread.sleep(2000);
 
 		for (WebElement row1 : allRowsOfTable1) {
 

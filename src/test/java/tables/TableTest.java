@@ -12,13 +12,13 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import pageObject.HomePage;
+import pageObject.TableData;
 import resource.Base;
 
-public class HomePageTest extends Base {
+public class TableTest extends Base {
 
 	public WebDriver driver;
-	HomePage homepage;
+	TableData tableData;
 	List<WebElement> headerTable1;
 	List<WebElement> headerTable2;
 	List<WebElement> allRowsOfTable1;
@@ -32,7 +32,8 @@ public class HomePageTest extends Base {
 	@BeforeTest
 	private void initializeDriver() throws IOException {
 		driver = initialization();
-		homepage = new HomePage(driver);
+		driver.get(getUrl());
+		tableData = new TableData(driver);
 	}
 
 	@AfterTest
@@ -43,16 +44,16 @@ public class HomePageTest extends Base {
 	@Test
 	private void verifyHeaderOfTable1AndTable2() {
 
-		Assert.assertSame(homepage.getHeaderTable1().size(), homepage.getHeaderTable2().size());
+		Assert.assertSame(tableData.getHeaderTable1().size(), tableData.getHeaderTable2().size());
 
 	}
 
 	@Test
 	private void verifyHeaderNameAndOrder() {
 
-		headerTable1 = homepage.getHeaderTable1();
+		headerTable1 = tableData.getHeaderTable1();
 
-		headerTable2 = homepage.getHeaderTable2();
+		headerTable2 = tableData.getHeaderTable2();
 
 		// Verify the Table1 Header Row Size with Table2 Header Row Size
 		Assert.assertTrue(headerTable1.size() == headerTable2.size());
@@ -70,15 +71,15 @@ public class HomePageTest extends Base {
 	private void verifyNumberOfDataRows() {
 
 		// Verify number of Rows in Table 1 is same as number of Rows in Table 2
-		Assert.assertSame(homepage.getAllRowsOfTable1().size(), homepage.getAllRowsOfTable2().size());
+		Assert.assertSame(tableData.getAllRowsOfTable1().size(), tableData.getAllRowsOfTable2().size());
 
 	}
 
 	@Test
 	private void verifyRowData() {
 
-		allRowsOfTable1 = homepage.getAllRowsOfTable1();
-		allRowsOfTable2 = homepage.getAllRowsOfTable2();
+		allRowsOfTable1 = tableData.getAllRowsOfTable1();
+		allRowsOfTable2 = tableData.getAllRowsOfTable2();
 
 		for (int i = 0; i < allRowsOfTable1.size(); i++) {
 
@@ -94,17 +95,17 @@ public class HomePageTest extends Base {
 	@Test(dependsOnMethods = { "verifyRowData" })
 	private void verifyRowDataWithSort() throws InterruptedException {
 
-		allRowsOfTable1 = homepage.getAllRowsOfTable1();
-		allRowsOfTable2 = homepage.getAllRowsOfTable2();
+		allRowsOfTable1 = tableData.getAllRowsOfTable1();
+		allRowsOfTable2 = tableData.getAllRowsOfTable2();
 
 		list1 = new ArrayList<String>();
 		list2 = new ArrayList<String>();
 
 		// Table1 will sort as First Name
-		homepage.getSortByFirstNameTable1().click();
+		tableData.getSortByFirstNameTable1().click();
 
 		// Table2 will sort as Last Name
-		homepage.getSortByLastNameTable2().click();
+		tableData.getSortByLastNameTable2().click();
 		
 		Thread.sleep(2000);
 

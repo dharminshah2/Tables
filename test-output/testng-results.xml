@@ -1,80 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-10T06:40:13Z" name="Table Suite" finished-at="2022-02-10T06:40:19Z" duration-ms="5866">
+  <suite started-at="2022-02-10T17:49:14Z" name="Table Suite" finished-at="2022-02-10T17:49:19Z" duration-ms="5279">
     <groups>
     </groups>
-    <test started-at="2022-02-10T06:40:13Z" name="Test" finished-at="2022-02-10T06:40:19Z" duration-ms="5866">
-      <class name="tables.HomePageTest">
-        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:tables.HomePageTest@665df3c6]" started-at="2022-02-10T06:40:13Z" name="initializeDriver" finished-at="2022-02-10T06:40:15Z" duration-ms="2063" status="PASS">
+    <test started-at="2022-02-10T17:49:14Z" name="Test" finished-at="2022-02-10T17:49:19Z" duration-ms="5279">
+      <class name="tables.TableTest">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:tables.TableTest@665df3c6]" started-at="2022-02-10T17:49:14Z" name="initializeDriver" finished-at="2022-02-10T17:49:16Z" duration-ms="2127" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method signature="verifyHeaderNameAndOrder()[pri:0, instance:tables.HomePageTest@665df3c6]" started-at="2022-02-10T06:40:15Z" name="verifyHeaderNameAndOrder" finished-at="2022-02-10T06:40:15Z" duration-ms="341" status="PASS">
+        <test-method signature="verifyHeaderNameAndOrder()[pri:0, instance:tables.TableTest@665df3c6]" started-at="2022-02-10T17:49:16Z" name="verifyHeaderNameAndOrder" finished-at="2022-02-10T17:49:16Z" duration-ms="134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHeaderNameAndOrder -->
-        <test-method signature="verifyHeaderOfTable1AndTable2()[pri:0, instance:tables.HomePageTest@665df3c6]" started-at="2022-02-10T06:40:15Z" name="verifyHeaderOfTable1AndTable2" finished-at="2022-02-10T06:40:15Z" duration-ms="35" status="PASS">
+        <test-method signature="verifyHeaderOfTable1AndTable2()[pri:0, instance:tables.TableTest@665df3c6]" started-at="2022-02-10T17:49:16Z" name="verifyHeaderOfTable1AndTable2" finished-at="2022-02-10T17:49:16Z" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHeaderOfTable1AndTable2 -->
-        <test-method signature="verifyNumberOfDataRows()[pri:0, instance:tables.HomePageTest@665df3c6]" started-at="2022-02-10T06:40:15Z" name="verifyNumberOfDataRows" finished-at="2022-02-10T06:40:15Z" duration-ms="45" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at tables.HomePageTest.verifyNumberOfDataRows(HomePageTest.java:74)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="verifyNumberOfDataRows()[pri:0, instance:tables.TableTest@665df3c6]" started-at="2022-02-10T17:49:16Z" name="verifyNumberOfDataRows" finished-at="2022-02-10T17:49:16Z" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNumberOfDataRows -->
-        <test-method signature="verifyRowData()[pri:0, instance:tables.HomePageTest@665df3c6]" started-at="2022-02-10T06:40:15Z" name="verifyRowData" finished-at="2022-02-10T06:40:16Z" duration-ms="183" status="PASS">
+        <test-method signature="verifyRowData()[pri:0, instance:tables.TableTest@665df3c6]" started-at="2022-02-10T17:49:16Z" name="verifyRowData" finished-at="2022-02-10T17:49:16Z" duration-ms="91" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRowData -->
-        <test-method signature="verifyRowDataWithSort()[pri:0, instance:tables.HomePageTest@665df3c6]" started-at="2022-02-10T06:40:16Z" name="verifyRowDataWithSort" finished-at="2022-02-10T06:40:19Z" depends-on-methods="tables.HomePageTest.verifyRowData" duration-ms="3032" status="PASS">
+        <test-method signature="verifyRowDataWithSort()[pri:0, instance:tables.TableTest@665df3c6]" started-at="2022-02-10T17:49:16Z" name="verifyRowDataWithSort" finished-at="2022-02-10T17:49:19Z" depends-on-methods="tables.TableTest.verifyRowData" duration-ms="2744" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRowDataWithSort -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tables.HomePageTest@665df3c6]" started-at="2022-02-10T06:40:19Z" name="tearDown" finished-at="2022-02-10T06:40:19Z" duration-ms="123" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tables.TableTest@665df3c6]" started-at="2022-02-10T17:49:19Z" name="tearDown" finished-at="2022-02-10T17:49:19Z" duration-ms="127" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tables.HomePageTest -->
+      </class> <!-- tables.TableTest -->
     </test> <!-- Test -->
   </suite> <!-- Table Suite -->
 </testng-results>

@@ -10,11 +10,11 @@ import resource.Base;
 import resource.GenericTable;
 
 
-public class HomePage extends Base implements GenericTable {
+public class TableData extends Base implements GenericTable {
 	
 	private WebDriver driver;
 	
-	public HomePage(WebDriver driver) {
+	public TableData(WebDriver driver) {
 		this.driver = driver;
 	}
 	

@@ -1,13 +1,8 @@
 package resource;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -29,7 +24,7 @@ public class Base {
 		prop.load(fis);
 
 		browserName = prop.getProperty("browser");
-		url = prop.getProperty("url");
+		setUrl(prop.getProperty("url"));
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", projectPath + "\\src\\main\\java\\driver\\chromedriver.exe");
@@ -38,14 +33,20 @@ public class Base {
 			System.setProperty("webdriver.gecko.driver", projectPath + "\\src\\main\\java\\driver\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		} else {
-			System.setProperty("webdriver.edge.driver", projectPath + "\\src\\main\\java\\driver\\msedgedriver.exe");
-			driver = new EdgeDriver();
+			System.setProperty("webdriver.chrome.driver", projectPath + "\\src\\main\\java\\driver\\chromedriver.exe");
+			driver = new ChromeDriver();
 		}
-		
-		driver.get(url);
 		
 		driver.manage().window().maximize();
 
 		return driver;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 }

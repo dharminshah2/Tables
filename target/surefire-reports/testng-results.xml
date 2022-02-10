@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-02-10T06:42:04Z" name="Table Suite" finished-at="2022-02-10T06:42:10Z" duration-ms="5736">
+    <groups>
+    </groups>
+    <test started-at="2022-02-10T06:42:04Z" name="Test" finished-at="2022-02-10T06:42:10Z" duration-ms="5736">
+      <class name="tables.HomePageTest">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:tables.HomePageTest@6bea52d4]" started-at="2022-02-10T06:42:04Z" name="initializeDriver" finished-at="2022-02-10T06:42:06Z" duration-ms="2319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method signature="verifyHeaderNameAndOrder()[pri:0, instance:tables.HomePageTest@6bea52d4]" started-at="2022-02-10T06:42:06Z" name="verifyHeaderNameAndOrder" finished-at="2022-02-10T06:42:06Z" duration-ms="200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeaderNameAndOrder -->
+        <test-method signature="verifyHeaderOfTable1AndTable2()[pri:0, instance:tables.HomePageTest@6bea52d4]" started-at="2022-02-10T06:42:06Z" name="verifyHeaderOfTable1AndTable2" finished-at="2022-02-10T06:42:07Z" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeaderOfTable1AndTable2 -->
+        <test-method signature="verifyNumberOfDataRows()[pri:0, instance:tables.HomePageTest@6bea52d4]" started-at="2022-02-10T06:42:07Z" name="verifyNumberOfDataRows" finished-at="2022-02-10T06:42:07Z" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNumberOfDataRows -->
+        <test-method signature="verifyRowData()[pri:0, instance:tables.HomePageTest@6bea52d4]" started-at="2022-02-10T06:42:07Z" name="verifyRowData" finished-at="2022-02-10T06:42:07Z" duration-ms="91" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRowData -->
+        <test-method signature="verifyRowDataWithSort()[pri:0, instance:tables.HomePageTest@6bea52d4]" started-at="2022-02-10T06:42:07Z" name="verifyRowDataWithSort" finished-at="2022-02-10T06:42:10Z" depends-on-methods="tables.HomePageTest.verifyRowData" duration-ms="2940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRowDataWithSort -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tables.HomePageTest@6bea52d4]" started-at="2022-02-10T06:42:10Z" name="tearDown" finished-at="2022-02-10T06:42:10Z" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tables.HomePageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Table Suite -->
+</testng-results>
